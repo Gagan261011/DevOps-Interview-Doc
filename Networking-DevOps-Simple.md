@@ -1,5 +1,34 @@
 # Networking for DevOps – Simple Explanations with Examples
 
+## Table of Contents
+
+1. [Overview Table](#overview-table)
+2. [IP Address](#ip-address)
+3. [Private vs Public IP](#private-vs-public-ip)
+4. [CIDR](#cidr)
+5. [Subnet](#subnet)
+6. [Gateway](#gateway)
+7. [Routing](#routing)
+8. [TCP vs UDP](#tcp-vs-udp)
+9. [Ports](#ports)
+10. [DNS](#dns)
+11. [HTTP vs HTTPS](#http-vs-https)
+12. [NAT](#nat)
+13. [Firewalls](#firewalls)
+14. [Security Groups](#security-groups)
+15. [Load Balancer L4 vs L7](#load-balancer-l4-vs-l7)
+16. [Reverse Proxy](#reverse-proxy)
+17. [SSH](#ssh)
+18. [VPN](#vpn)
+19. [VPC](#vpc)
+20. [Container Networking](#container-networking)
+21. [Service-to-Service Communication](#service-to-service-communication)
+22. [Common Networking Failures](#common-networking-failures)
+23. [Quick Debugging Checklist](#quick-debugging-checklist)
+24. [Essential Networking Tools Summary](#essential-networking-tools-summary)
+
+---
+
 ## Overview Table
 
 | Topic | One-line meaning | Common DevOps Example |

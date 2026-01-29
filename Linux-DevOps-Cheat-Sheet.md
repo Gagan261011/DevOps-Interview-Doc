@@ -4,6 +4,36 @@ This document is designed for **DevOps use-cases** (servers, deployments, troubl
 
 ---
 
+## Table of Contents
+
+1. [Left-Side Topic Map (Overview)](#left-side-topic-map-overview)
+2. [Filesystem Basics](#filesystem-basics)
+3. [File Operations](#file-operations)
+4. [Viewing Files](#viewing-files)
+5. [Find & Search](#find--search)
+6. [Permissions & Ownership](#permissions--ownership)
+7. [Users & Groups](#users--groups)
+8. [Process Management](#process-management)
+9. [Systemd & Services](#systemd--services)
+10. [Logs](#logs)
+11. [Disk Usage & Filesystem](#disk-usage--filesystem)
+12. [Networking Basics](#networking-basics)
+13. [Ports & Connections](#ports--connections)
+14. [SSH & Key-based Auth](#ssh--key-based-auth)
+15. [Packaging & Updates](#packaging--updates)
+16. [Environment Variables](#environment-variables)
+17. [Shell Scripting Basics](#shell-scripting-basics)
+18. [Cron & Scheduling](#cron--scheduling)
+19. [Archiving & Compression](#archiving--compression)
+20. [Text Processing](#text-processing)
+21. [cURL & Wget](#curl--wget)
+22. [System Monitoring](#system-monitoring)
+23. [Resource Limits](#resource-limits)
+24. [Common Troubleshooting Flow](#common-troubleshooting-flow)
+25. [Closing Notes](#closing-notes)
+
+---
+
 ## Left-Side Topic Map (Overview)
 
 | Topic | Trigger Idea (1 line) | Most Used Command |

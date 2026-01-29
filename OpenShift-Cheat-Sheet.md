@@ -4,6 +4,35 @@ This document is designed for **fast recall** and **knowledge transfer (KT)**. I
 
 ---
 
+## Table of Contents
+
+1. [Left-Side Topic Map (Overview)](#left-side-topic-map-overview)
+2. [Projects / Namespaces](#projects--namespaces)
+3. [Nodes](#nodes)
+4. [Pods](#pods)
+5. [Deployments](#deployments)
+6. [DeploymentConfigs](#deploymentconfigs)
+7. [ReplicaSets](#replicasets)
+8. [StatefulSets](#statefulsets)
+9. [DaemonSets](#daemonsets)
+10. [Jobs / CronJobs](#jobs--cronjobs)
+11. [Services (ClusterIP, NodePort, LoadBalancer)](#services-clusterip-nodeport-loadbalancer)
+12. [Routes](#routes)
+13. [Ingress](#ingress)
+14. [ConfigMaps](#configmaps)
+15. [Secrets](#secrets)
+16. [ServiceAccounts](#serviceaccounts)
+17. [Roles & RoleBindings (RBAC)](#roles--rolebindings-rbac)
+18. [PersistentVolumeClaims (PVC)](#persistentvolumeclaims-pvc)
+19. [StorageClasses](#storageclasses)
+20. [BuildConfigs](#buildconfigs)
+21. [ImageStreams](#imagestreams)
+22. [Templates](#templates)
+23. [Operators / OperatorHub](#operators--operatorhub)
+24. [Closing Notes](#closing-notes)
+
+---
+
 ## Left-Side Topic Map (Overview)
 
 | Topic | What it is (1 line) | Most used oc command |

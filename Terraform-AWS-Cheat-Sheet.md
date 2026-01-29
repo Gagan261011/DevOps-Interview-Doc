@@ -1,5 +1,39 @@
 # Terraform with AWS – High Retrieval Cheat Sheet
 
+## Table of Contents
+
+1. [Overview Table](#overview-table)
+2. [Terraform Workflow](#terraform-workflow)
+3. [Providers](#providers)
+4. [State Management](#state-management)
+5. [Remote Backend (S3)](#remote-backend-s3)
+6. [State Locking (DynamoDB)](#state-locking-dynamodb)
+7. [Resources](#resources)
+8. [Data Sources](#data-sources)
+9. [Variables](#variables)
+10. [Outputs](#outputs)
+11. [Locals](#locals)
+12. [Modules](#modules)
+13. [Workspaces](#workspaces)
+14. [Lifecycle Meta-Arguments](#lifecycle-meta-arguments)
+15. [Dependencies](#dependencies)
+16. [Best Practices](#best-practices)
+17. [AWS Provider](#aws-provider)
+18. [IAM](#iam)
+19. [VPC](#vpc)
+20. [Subnets](#subnets)
+21. [Security Groups](#security-groups)
+22. [EC2 Instances](#ec2-instances)
+23. [AMI Data Source](#ami-data-source)
+24. [Key Pairs](#key-pairs)
+25. [Application Load Balancer](#application-load-balancer)
+26. [Auto Scaling Group](#auto-scaling-group)
+27. [S3 Buckets](#s3-buckets)
+28. [RDS](#rds)
+29. [Tags](#tags)
+
+---
+
 ## Overview Table
 
 | Topic | Trigger (1 line) | Key Construct |

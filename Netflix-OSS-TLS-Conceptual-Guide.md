@@ -1,5 +1,39 @@
 # Netflix OSS Architecture & TLS Certificates – Clear Conceptual Guide
 
+## Table of Contents
+
+### Part 1: Netflix OSS Stack
+1. [Introduction](#introduction)
+2. [High-Level Architecture Overview](#high-level-architecture-overview)
+3. [Eureka (Service Discovery)](#eureka-service-discovery)
+4. [Ribbon (Client-Side Load Balancing)](#ribbon-client-side-load-balancing)
+5. [Feign (Declarative HTTP Client)](#feign-declarative-http-client)
+6. [Zuul / Spring Cloud Gateway (API Gateway)](#zuul--spring-cloud-gateway-api-gateway)
+7. [Hystrix / Resilience4j (Fault Tolerance)](#hystrix--resilience4j-fault-tolerance)
+8. [Config Server](#config-server)
+9. [Sleuth + Zipkin (Distributed Tracing)](#sleuth--zipkin-distributed-tracing)
+10. [How Netflix OSS Components Work Together](#how-netflix-oss-components-work-together)
+
+### Part 2: TLS Certificates
+11. [What a Certificate Really Is](#what-a-certificate-really-is)
+12. [Public Key vs Private Key (Intuitive Explanation)](#public-key-vs-private-key-intuitive-explanation)
+13. [What a Certificate Authority (CA) Does](#what-a-certificate-authority-ca-does)
+14. [Root CA vs Intermediate CA](#root-ca-vs-intermediate-ca)
+15. [Why Browsers Trust Some Certificates](#why-browsers-trust-some-certificates)
+16. [Step-by-Step TLS Handshake](#step-by-step-tls-handshake)
+17. [Complete Example: Visiting google.com](#complete-example-visiting-googlecom)
+18. [Why This Matters](#why-this-matters)
+19. [TLS Termination at Load Balancer](#tls-termination-at-load-balancer)
+20. [TLS Between Microservices (mTLS)](#tls-between-microservices-mtls)
+21. [Certificates in Kubernetes](#certificates-in-kubernetes)
+22. [Self-Signed vs CA-Signed Certificates](#self-signed-vs-ca-signed-certificates)
+23. [Where Certificates Are Stored](#where-certificates-are-stored)
+24. [Common Certificate Problems in Production](#common-certificate-problems-in-production)
+25. [DevOps Certificate Checklist](#devops-certificate-checklist)
+26. [Final Mental Model](#final-mental-model)
+
+---
+
 ## Introduction
 
 This guide builds your mental model for two critical DevOps topics: how Netflix's open-source microservices tools work together, and how TLS certificates secure communication. The goal is intuition, not memorization.
