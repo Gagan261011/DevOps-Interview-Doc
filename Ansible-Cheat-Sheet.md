@@ -4,6 +4,39 @@ This document is designed for **quick revision, recall, and teaching**. It assum
 
 ---
 
+## Table of Contents
+
+1. [Left-Side Topic Map (Overview)](#left-side-topic-map-overview)
+2. [Ansible Architecture](#ansible-architecture)
+3. [Inventory (INI & YAML)](#inventory-ini--yaml)
+4. [Static vs Dynamic Inventory](#static-vs-dynamic-inventory)
+5. [ansible.cfg](#ansiblecfg)
+6. [Ad-hoc Commands](#ad-hoc-commands)
+7. [Playbooks](#playbooks)
+8. [Plays vs Tasks](#plays-vs-tasks)
+9. [Modules](#modules)
+10. [Variables](#variables)
+11. [Variable Precedence](#variable-precedence)
+12. [Facts & Gathering Facts](#facts--gathering-facts)
+13. [Conditionals (when)](#conditionals-when)
+14. [Loops](#loops)
+15. [Handlers](#handlers)
+16. [Templates (Jinja2)](#templates-jinja2)
+17. [Files & Copy](#files--copy)
+18. [Roles](#roles)
+19. [Role Directory Structure](#role-directory-structure)
+20. [Ansible Galaxy](#ansible-galaxy)
+21. [Vault](#vault)
+22. [Tags](#tags)
+23. [Error Handling (ignore_errors, failed_when)](#error-handling-ignore_errors-failed_when)
+24. [Async & Poll](#async--poll)
+25. [Delegation (delegate_to, local_action)](#delegation-delegate_to-local_action)
+26. [Privilege Escalation (become)](#privilege-escalation-become)
+27. [Ansible Best Practices](#ansible-best-practices)
+28. [Closing Notes](#closing-notes)
+
+---
+
 ## Left-Side Topic Map (Overview)
 
 | Topic | Trigger Idea (1 line) | Most Used Command / Keyword |
