@@ -38,6 +38,7 @@ This document is designed for **quick revision, recall, and teaching**. It assum
 ---
 
 ## Ansible Architecture
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Agentless automation – control node pushes configuration to managed nodes over SSH."
 
@@ -92,6 +93,7 @@ This document is designed for **quick revision, recall, and teaching**. It assum
 ---
 
 ## Inventory (INI & YAML)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Inventory is the list of managed hosts, organized into groups."
 
@@ -165,6 +167,7 @@ all:
 ---
 
 ## Static vs Dynamic Inventory
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Static inventory is a fixed file; dynamic inventory fetches hosts programmatically."
 
@@ -229,6 +232,7 @@ ansible-playbook -i inventory_aws_ec2.yml site.yml
 ---
 
 ## ansible.cfg
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Configuration file controlling Ansible behavior and defaults."
 
@@ -290,6 +294,7 @@ become_user = root
 ---
 
 ## Ad-hoc Commands
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "One-liner commands for quick tasks without writing playbooks."
 
@@ -356,6 +361,7 @@ ansible web -m setup
 ---
 
 ## Playbooks
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Playbooks are YAML files defining declarative automation tasks."
 
@@ -428,6 +434,7 @@ ansible web -m setup
 ---
 
 ## Plays vs Tasks
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Play targets hosts and contains tasks; tasks are individual actions."
 
@@ -493,6 +500,7 @@ ansible web -m setup
 ---
 
 ## Modules
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Modules are reusable units performing specific actions like installing packages or copying files."
 
@@ -570,6 +578,7 @@ ansible web -m setup
 ---
 
 ## Variables
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Variables store dynamic values used throughout playbooks."
 
@@ -662,6 +671,7 @@ app_name: webapp
 ---
 
 ## Variable Precedence
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Variable precedence determines which value wins when defined in multiple places."
 
@@ -742,6 +752,7 @@ app_name: webapp
 ---
 
 ## Facts & Gathering Facts
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Facts are system information auto-collected from managed nodes."
 
@@ -826,6 +837,7 @@ app_name: webapp
 ---
 
 ## Conditionals (when)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Execute tasks conditionally using the 'when' statement."
 
@@ -915,6 +927,7 @@ app_name: webapp
 ---
 
 ## Loops
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Loops repeat tasks with different values using 'loop' or 'with_items'."
 
@@ -1010,6 +1023,7 @@ app_name: webapp
 ---
 
 ## Handlers
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Handlers are tasks triggered by notifications, typically for service restarts."
 
@@ -1108,6 +1122,7 @@ handlers:
 ---
 
 ## Templates (Jinja2)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Templates generate dynamic configuration files using Jinja2 syntax."
 
@@ -1198,6 +1213,7 @@ server {
 ---
 
 ## Files & Copy
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Copy module transfers files; file module manages file properties."
 
@@ -1298,6 +1314,7 @@ server {
 ---
 
 ## Roles
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Roles are reusable, organized structures for grouping related automation."
 
@@ -1399,6 +1416,7 @@ roles/
 ---
 
 ## Role Directory Structure
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Standard layout organizes role components: tasks, handlers, vars, templates, files."
 
@@ -1498,6 +1516,7 @@ dependencies:
 ---
 
 ## Ansible Galaxy
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Community hub for discovering, sharing, and installing Ansible roles."
 
@@ -1585,6 +1604,7 @@ roles:
 ---
 
 ## Vault
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Vault encrypts sensitive data like passwords and keys in playbooks."
 
@@ -1691,6 +1711,7 @@ db_password: !vault |
 ---
 
 ## Tags
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Tags enable selective execution of specific tasks or roles."
 
@@ -1805,6 +1826,7 @@ ansible-playbook site.yml --tags untagged
 ---
 
 ## Error Handling (ignore_errors, failed_when)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Control how Ansible responds to task failures."
 
@@ -1909,6 +1931,7 @@ ansible-playbook site.yml --tags untagged
 ---
 
 ## Async & Poll
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Run long-running tasks asynchronously without blocking playbook execution."
 
@@ -2011,6 +2034,7 @@ ansible-playbook site.yml --tags untagged
 ---
 
 ## Delegation (delegate_to, local_action)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Execute tasks on different hosts than the play target."
 
@@ -2110,6 +2134,7 @@ ansible-playbook site.yml --tags untagged
 ---
 
 ## Privilege Escalation (become)
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Execute tasks with elevated privileges using become."
 
@@ -2230,6 +2255,7 @@ become_ask_pass = False
 ---
 
 ## Ansible Best Practices
+[↑ Back to Overview](#left-side-topic-map-overview)
 
 🔑 **Primary Trigger:** "Guidelines for writing maintainable, secure, and efficient Ansible automation."
 
