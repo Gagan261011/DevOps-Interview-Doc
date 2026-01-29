@@ -4,6 +4,39 @@ This document is designed for **fast recall and knowledge transfer (KT)**. It as
 
 ---
 
+## Table of Contents
+
+1. [Left-Side Topic Map (Overview)](#left-side-topic-map-overview)
+2. [GitHub Actions Architecture](#github-actions-architecture)
+3. [Workflow File Structure](#workflow-file-structure)
+4. [Events (on:)](#events-on)
+5. [Jobs](#jobs)
+6. [Steps](#steps)
+7. [Runners (GitHub-hosted vs Self-hosted)](#runners-github-hosted-vs-self-hosted)
+8. [Actions (Marketplace)](#actions-marketplace)
+9. [Using Actions vs Writing Scripts](#using-actions-vs-writing-scripts)
+10. [Checkout Action](#checkout-action)
+11. [Setup Language (Node/Java/Python)](#setup-language-nodejavapython)
+12. [Environment Variables](#environment-variables)
+13. [Secrets](#secrets)
+14. [Contexts (github, env, steps, needs)](#contexts-github-env-steps-needs)
+15. [Expressions & Conditions (if)](#expressions--conditions-if)
+16. [Matrix Strategy](#matrix-strategy)
+17. [Caching](#caching)
+18. [Artifacts](#artifacts)
+19. [Job Dependencies (needs)](#job-dependencies-needs)
+20. [Environments & Approvals](#environments--approvals)
+21. [Permissions](#permissions)
+22. [Reusable Workflows](#reusable-workflows)
+23. [Composite Actions](#composite-actions)
+24. [Manual Triggers (workflow_dispatch)](#manual-triggers-workflow_dispatch)
+25. [Scheduled Workflows (cron)](#scheduled-workflows-cron)
+26. [Failure Handling](#failure-handling)
+27. [Best Practices](#best-practices)
+28. [Closing Notes](#closing-notes)
+
+---
+
 ## Left-Side Topic Map (Overview)
 
 | Topic | Trigger Idea (1 line) | Most Used Keyword / Field |
@@ -38,6 +71,7 @@ This document is designed for **fast recall and knowledge transfer (KT)**. It as
 ---
 
 ## GitHub Actions Architecture
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Event-driven automation platform built into GitHub for CI/CD workflows."
 
@@ -95,6 +129,7 @@ jobs:
 ---
 
 ## Workflow File Structure
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "YAML files in .github/workflows/ define what happens when events occur."
 
@@ -161,6 +196,7 @@ jobs:
 ---
 
 ## Events (on:)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Events trigger workflows – push, pull requests, schedules, or manual runs."
 
@@ -232,6 +268,7 @@ jobs:
 ---
 
 ## Jobs
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Jobs are independent work units that run in parallel by default."
 
@@ -307,6 +344,7 @@ jobs:
 ---
 
 ## Steps
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Steps are sequential tasks within a job – actions or shell commands."
 
@@ -389,6 +427,7 @@ jobs:
 ---
 
 ## Runners (GitHub-hosted vs Self-hosted)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Runners are VMs executing workflows – GitHub-hosted or self-hosted."
 
@@ -460,6 +499,7 @@ jobs:
 ---
 
 ## Actions (Marketplace)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Actions are reusable automation units from GitHub Marketplace or custom repositories."
 
@@ -540,6 +580,7 @@ jobs:
 ---
 
 ## Using Actions vs Writing Scripts
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Use marketplace actions for common tasks, write scripts for custom logic."
 
@@ -636,6 +677,7 @@ jobs:
 ---
 
 ## Checkout Action
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Checkout action clones repository code into the runner workspace."
 
@@ -726,6 +768,7 @@ jobs:
 ---
 
 ## Setup Language (Node/Java/Python)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Setup actions install language runtimes and configure environments."
 
@@ -814,6 +857,7 @@ jobs:
 ---
 
 ## Environment Variables
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Environment variables pass configuration to jobs and steps."
 
@@ -902,6 +946,7 @@ jobs:
 ---
 
 ## Secrets
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Secrets store encrypted sensitive values like passwords and tokens."
 
@@ -990,6 +1035,7 @@ jobs:
 ---
 
 ## Contexts (github, env, steps, needs)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Contexts provide access to workflow metadata, variables, and outputs."
 
@@ -1082,6 +1128,7 @@ jobs:
 ---
 
 ## Expressions & Conditions (if)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Conditional execution using if with expressions and functions."
 
@@ -1178,6 +1225,7 @@ jobs:
 ---
 
 ## Matrix Strategy
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Matrix strategy runs jobs with multiple configurations in parallel."
 
@@ -1266,6 +1314,7 @@ jobs:
 ---
 
 ## Caching
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Cache dependencies between workflow runs for faster builds."
 
@@ -1367,6 +1416,7 @@ jobs:
 ---
 
 ## Artifacts
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Artifacts share files between jobs or persist build outputs."
 
@@ -1460,6 +1510,7 @@ jobs:
 ---
 
 ## Job Dependencies (needs)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Control job execution order with needs for sequential workflows."
 
@@ -1548,6 +1599,7 @@ jobs:
 ---
 
 ## Environments & Approvals
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Environments add protection rules and manual approval gates."
 
@@ -1637,6 +1689,7 @@ jobs:
 ---
 
 ## Permissions
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Permissions control what the GITHUB_TOKEN can access."
 
@@ -1734,6 +1787,7 @@ jobs:
 ---
 
 ## Reusable Workflows
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Reusable workflows share entire workflows across repositories."
 
@@ -1835,6 +1889,7 @@ jobs:
 ---
 
 ## Composite Actions
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Composite actions bundle multiple steps into a single reusable action."
 
@@ -1943,6 +1998,7 @@ jobs:
 ---
 
 ## Manual Triggers (workflow_dispatch)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Manually trigger workflows from GitHub UI or API with custom inputs."
 
@@ -2037,6 +2093,7 @@ jobs:
 ---
 
 ## Scheduled Workflows (cron)
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Schedule workflows with cron syntax for periodic execution."
 
@@ -2143,6 +2200,7 @@ jobs:
 ---
 
 ## Failure Handling
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Control workflow behavior on failures with continue-on-error and status checks."
 
@@ -2247,6 +2305,7 @@ jobs:
 ---
 
 ## Best Practices
+[↑ Back to Overview](#table-of-contents)
 
 🔑 **Primary Trigger:** "Guidelines for secure, efficient, and maintainable GitHub Actions workflows."
 
