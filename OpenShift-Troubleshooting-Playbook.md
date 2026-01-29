@@ -4,6 +4,51 @@ Quick reference for on-call incidents. Commands first, reasoning second.
 
 ---
 
+## Table of Contents
+
+### Pod Issues
+1. [Pod Stuck in Pending](#1-pod-stuck-in-pending)
+2. [Pod Stuck in ContainerCreating](#2-pod-stuck-in-containercreating)
+3. [Pod CrashLoopBackOff](#3-pod-crashloopbackoff)
+4. [Pod Restarting Continuously](#4-pod-restarting-continuously)
+5. [Pod OOMKilled](#5-pod-oomkilled)
+6. [ImagePullBackOff](#6-imagepullbackoff)
+7. [ErrImagePull](#7-errimagepull)
+8. [Application Starts Then Exits Immediately](#25-application-starts-then-exits-immediately)
+
+### Deployment Issues
+9. [Deployment Not Creating Pods](#8-deployment-not-creating-pods)
+10. [Deployment Not Updating After Image Change](#9-deployment-not-updating-after-image-change)
+11. [Old Pods Not Terminating During Rollout](#10-old-pods-not-terminating-during-rollout)
+
+### Service & Networking Issues
+12. [Service Not Reachable Inside Cluster](#11-service-not-reachable-inside-cluster)
+13. [Service Not Reachable From Outside](#12-service-not-reachable-from-outside)
+14. [Route Returns 503 / 404](#13-route-returns-503--404)
+15. [Route Works Intermittently](#14-route-works-intermittently)
+16. [DNS Resolution Failing Inside Pod](#15-dns-resolution-failing-inside-pod)
+
+### Configuration Issues
+17. [ConfigMap Changes Not Reflected](#16-configmap-changes-not-reflected)
+18. [Secret Not Mounted / Injected](#17-secret-not-mounted--injected)
+
+### Storage Issues
+19. [PVC Stuck in Pending](#18-pvc-stuck-in-pending)
+20. [PVC Mount Failure in Pod](#19-pvc-mount-failure-in-pod)
+
+### Node Issues
+21. [Node NotReady](#20-node-notready)
+22. [Node DiskPressure / MemoryPressure](#21-node-diskpressure--memorypressure)
+
+### Performance & Health Issues
+23. [High CPU / Memory Usage in Pod](#22-high-cpu--memory-usage-in-pod)
+24. [Liveness / Readiness Probe Failures](#23-liveness--readiness-probe-failures)
+
+### Security Issues
+25. [Permission Denied / SCC Related Issues](#24-permission-denied--scc-related-issues)
+
+---
+
 ## 1. Pod Stuck in Pending
 
 **Trigger symptom**
